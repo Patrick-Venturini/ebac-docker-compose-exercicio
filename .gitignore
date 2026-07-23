@@ -1,0 +1,74 @@
+# =========================
+# Node
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Cypress
+# =========================
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+cypress/results/
+
+# Caso use snapshots
+cypress/snapshots/
+
+# =========================
+# Allure
+# =========================
+allure-results/
+allure-report/
+
+# =========================
+# Test Reports
+# =========================
+coverage/
+test-results/
+playwright-report/
+
+# =========================
+# Docker
+# =========================
+docker-compose.override.yml
+
+# =========================
+# Ambiente
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Sistema Operacional
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Cache
+# =========================
+.cache/
+.nyc_output/
+
+# =========================
+# Arquivos temporários
+# =========================
+tmp/
+temp/

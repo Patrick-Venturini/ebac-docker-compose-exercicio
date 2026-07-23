@@ -1,0 +1,21 @@
+{
+  "name": "hub-de-leitura-api-teste",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --browser chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cypress": "^15.18.0",
+    "cypress-plugin-api": "^2.11.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.5.0",
+    "allure-cypress": "^3.10.2"
+  }
+}
