@@ -9,6 +9,8 @@ module.exports = defineConfig({
       });
       return config;
     },
-    baseUrl: 'http://localhost:3000/api/'
+    baseUrl: 'http://localhost:3000/api/',
+    video: true,
+    screenshotOnRunFailure: true
   },
 });

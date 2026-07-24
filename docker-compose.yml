@@ -1,0 +1,50 @@
+services:
+  backend-frontend:
+    build: ./ebac-hub-de-leitura-integrado
+    container_name: hub-de-leitura
+    ports:
+      - "3000:3000"
+
+    environment:
+      - PORT=3000
+      - HOST=0.0.0.0
+
+    networks:
+      - hub-network
+
+  cypress-api:
+    build: ./task-hub-de-leitura-api-cypress-test
+    container_name: hub-cypress-api
+    depends_on:
+      - backend-frontend
+
+    networks:
+      - hub-network
+
+    volumes:
+      - ./cypress-videos/api:/api-test/cypress/videos
+      - ./cypress-screenshots/api:/api-test/cypress/screenshots
+
+    environment:
+      - CYPRESS_BASE_URL=http://backend-frontend:3000/api/
+
+  cypress-ui:
+    build: ./ebac-cypress-bdd-cucumber
+    container_name: hub-cypress-ui
+    depends_on:
+      cypress-api:
+        condition: service_completed_successfully
+
+    networks:
+      - hub-network
+
+    volumes:
+      - ./cypress-videos/ui:/ui-test/cypress/videos
+      - ./cypress-screenshots/ui:/ui-test/cypress/screenshots
+
+    environment:
+      - CYPRESS_BASE_URL=http://backend-frontend:3000/
+
+networks:
+  hub-network:
+    driver: bridge

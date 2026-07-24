@@ -1,5 +1,5 @@
 FROM cypress/included:latest
-WORKDIR /e2e
+WORKDIR /ui-test
 
 COPY package.json .
 COPY package-lock.json .

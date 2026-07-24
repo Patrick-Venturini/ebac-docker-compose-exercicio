@@ -1,7 +1,7 @@
 import { Given, When, Then, DataTable } from '@badeball/cypress-cucumber-preprocessor';
 
 Given(`que eu estou na tela de Login`, () => {
-    cy.visit('http://localhost:3000/login.html')
+    cy.visit('/login.html')
 });
 
 When(`eu digito o usuario e senha com os seguintes dados:`, (dataTable) => {

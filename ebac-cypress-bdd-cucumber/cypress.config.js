@@ -13,6 +13,8 @@ module.exports = defineConfig({
       }))
       return config
     },
-    baseUrl: "http://localhost:3000"
+    baseUrl: "http://localhost:3000",
+    video: true,
+    screenshotOnRunFailure: true
   },
 })
