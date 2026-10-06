@@ -1,4 +1,4 @@
-FROM cypress/included:latest
+FROM cypress/included:15.18.0
 WORKDIR /ui-test
 
 COPY package.json .
